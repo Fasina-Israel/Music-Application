@@ -1,0 +1,27 @@
+.cont{
+    min-height: 100vh;
+    min-width: 100vw;
+    /* background-color: #e5e5e5; */
+}
+/* .elememt{
+    height: "40px";
+    width: "100px";
+    background-color: "red";
+    color: "black";
+    margin: "50px";
+    align-items: 'center';
+    border-radius: '10px';
+    justify-content : 'center';
+} */
+
+.icon{
+    position: 'absolute';
+    cursor: pointer;
+    color: black;
+    margin-right: '10px';
+}
+
+
+.space{
+    margin-top: "30px";
+}
