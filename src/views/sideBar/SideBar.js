@@ -20,15 +20,17 @@ const SideBar = () => {
     }
 
     const contain ={
-        background: "#e6e6e6",
-        borderLine: "black"
+        width: `${size}px`,
+        height: "100vh",
+        display: 'flex',
+        flexDirection: 'row'
     }
 
     const divStyle = {
-        background: "#edeeee",
         width: `${size}px`,
         height: '100vh',
-        zIndex: '-1',
+        display: 'flex',
+        flexDirection: 'row'
         
     }
 
@@ -72,31 +74,28 @@ const SideBar = () => {
     }
 
     return (
-        <div  style={contain}>
-            <div style={divStyle}>
-                <div style={header}>
+            <>
+                <div style={header} className="header">
                     {size === 300 ? <Search/>: ""}
                 </div>
-
                 <div className="sidebar" style={{ justifyContent: 'center',
                                             alignItems: 'center', 
                                             display: 'flex', 
-                                            flexDirection: 'column'
+                                            flexDirection: 'column',
+                                            width: '300px',
+                                            height: '100vh'
                                             }}
                                             >
-                    <SideBarMenu text={size === 300 ? "My music" : " "} pic={home} />
-                    <SideBarMenu text={size === 300 ? "Recent plays" : " "} pic={list} />
-                    <SideBarMenu text={size === 300 ? "Now playing" : " "} pic={products} />
+                    <SideBarMenu text={size === 300 ? "My music" : " "} pic={home} path="./my-music" />
+                    <SideBarMenu text={size === 300 ? "Recent plays" : " "} pic={list} path="./recent-Plays"/>
+                    <SideBarMenu text={size === 300 ? "Now playing" : " "} pic={products} path="./now-playing"/>
 
                     <div style={space}>
-                        <SideBarMenu text={size === 300 ? "Playlists" : " "} pic={settings} />
-                        <SideBarMenu text={size === 300 ? "Logout" : " "} pic={logout} />
+                        <SideBarMenu text={size === 300 ? "Playlists" : " "} pic={settings} path="./playlist"/>
+                        <SideBarMenu text={size === 300 ? "Logout" : " "} pic={logout} path="./logout"/>
                     </div>
-                </div>
-
-            </div>
-            {/* <img src={switches} style={btn} onClick={handleClick} alt=""></img> */}
         </div>
+        </>
     )
 }
 
