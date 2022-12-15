@@ -9,7 +9,7 @@ const MainBar = () => {
     <SideBar/>
     <div className="outlet" 
           style={{ 
-            backgroundColor: '#edeeee', 
+            backgroundColor: '#fff', 
             padding: '0px 5px', 
             height: '100vh', 
             width: '100%' 
