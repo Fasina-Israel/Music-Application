@@ -29,5 +29,5 @@
     margin-right: 30px;
     display:flex;
     flex-direction: column;
-
+    cursor: pointer
 }
