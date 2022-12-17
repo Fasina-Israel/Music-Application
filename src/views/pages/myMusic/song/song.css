@@ -1,11 +1,11 @@
 .filter{
-    height: 20%;
+    height: 5%;
     width: 100%;
     display:flex;
     flex-direction: row;
     justify-content: left;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 .filter-text{
     font-size: 15px;

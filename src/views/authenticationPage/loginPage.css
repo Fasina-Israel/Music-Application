@@ -1,0 +1,285 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.register-containers{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: auto;
+}
+
+.login-containers {
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    .containers {
+        width: 360px;
+        height: 100vh;
+        display: flex;
+        padding: 10px;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        background-image: none;
+    }
+}
+.learnspace-logo {
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    height: 10%;
+    width: 357px;
+}
+@media (max-width: 600px) {
+    .learnspaceLogo-wrapper {
+        width: 360px;
+        height: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .learnspace-logo {
+        /* background-image: url(/src/assets/images/MobileLearnspace.svg); */
+        width: 100px;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+    }
+}
+.learnspace-seed {
+    position: absolute;
+    width: 368.47px;
+    height: 400.93px;
+    left: -20px;
+    top: 282px;
+}
+
+@media (max-width: 600px) {
+    .learnspace-seed {
+        /* width: 360px;
+        height: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space;
+        align-items: flex-start;
+        padding: 15px; */
+        display: none;
+    }
+}
+
+.learnspace-seed2 {
+    position: absolute;
+    width: 368.47px;
+    height: 400.93px;
+    left: 1019px;
+    top: 440px;
+}
+/* .create-form {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    margin-top: 15px;
+    padding: 10px 40px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    border-radius: 8px;
+} */
+
+@media (max-width: 600px) {
+    .form {
+        width: 360px;
+        height: 350px;
+        background-color: #fff;
+        margin-top: 15px;
+        padding: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.form-header {
+    margin-bottom: 25px;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+h1 {
+    width: 46px;
+    height: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: #fff;
+}
+h2 {
+    width: 380px;
+    height: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #fff;
+}
+@media (max-width: 600px) {
+    h2 {
+        width: 360px;
+        height: 10px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        color: #fff;
+    }
+}
+.form-control {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0px;
+    gap: 8px;
+    width: 100%;
+    height: 100;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.form-input {
+    position: relative;
+}
+.eye-icon {
+    top: -30px;
+    left: 350px;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .eye-icon {
+        /* top: -30px;
+        left: 350px;
+        position: relative; */
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .form-control {
+        width: 360px;
+        padding: 10px;
+    }
+}
+.formLabel {
+    width: 150px;
+    height: 17px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #fff;
+}
+input {
+    width: 380px;
+    height: 40px;
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 14px;
+    margin: auto;
+}
+@media (max-width: 600px) {
+    input {
+        width: 350px;
+        padding: 10px;
+    }
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    outline: #000 solid 1px;
+    
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 30px;
+    color: #000;
+}
+.forgot-passwordLink {
+    text-decoration: none;
+    color: #000;
+}
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 8px;
+    gap: 8px;
+    width: 40%;
+    height: 43px;
+    background: #0d9b48;
+    color: #000;
+    border-radius: 4px;
+    border: none;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.create-account {
+    display: flex;
+    flex-direction: row;
+    width: 380px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.create-accountLink {
+    text-decoration: none;
+    color: #edeeee;
+    margin-left: 5px;
+
+}
+.login-copyright-text {
+    margin-top: 20px;
+}
+.login-learnspace-seed {
+    position: absolute;
+    left: -7.78%;
+    right: 82.19%;
+    top: 35%;
+    bottom: -5.75%;
+}

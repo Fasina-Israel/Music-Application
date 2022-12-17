@@ -9,7 +9,7 @@ import home from './../../assets/Home.svg'
 import SideBarMenu from './SideBarMenu'
 import {CiSearch} from  "react-icons/ci";
 
-const SideBar = () => {
+const SideBar = ({setStatus}) => {
 
     const [size, setSize] = useState(300)
     const header = {
@@ -41,10 +41,10 @@ const SideBar = () => {
                 </div>
                 <div className="sidebar">
                     <SideBarMenu text={size === 300 ? "My music" : " "} pic={home} path="./my-music" />
-                    <SideBarMenu text={size === 300 ? "Recent plays" : " "} pic={list} path="./recent-Plays"/>
-                    <SideBarMenu text={size === 300 ? "Now playing" : " "} pic={products} path="./now-playing"/>
-                    <SideBarMenu text={size === 300 ? "Playlists" : " "} pic={settings} path="./playlist"/>
-                    <SideBarMenu text={size === 300 ? "Logout" : " "} pic={logout} path="./logout"/>   
+                    <SideBarMenu text={size === 300 ? "Recent plays" : " "} pic={list} path="./recent-Plays" />
+                    <SideBarMenu text={size === 300 ? "Now playing" : " "} pic={products} path="./now-playing" />
+                    <SideBarMenu text={size === 300 ? "Playlists" : " "} pic={settings} path="./playlist" />
+                    <SideBarMenu text={size === 300 ? "Logout" : " "} pic={logout} path="./logout" />   
                     <hr className= "sideBar-line"/>
                     <SideBarMenu style={{ marginTop: '100px'}} text={size === 300 ? "Settings" : " "} pic={settings} path="./settings"/> 
                      

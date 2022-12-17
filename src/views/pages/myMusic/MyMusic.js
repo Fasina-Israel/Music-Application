@@ -1,14 +1,13 @@
 import React, {useState} from 'react'
-import './myMusic.css'
 import Songs from './song/Songs'
+import './myMusic.css';
 
 
 const MyMusic = () => {
-
   const [status, setStatus ] = useState('songs')
   return (
-    <div className="container">
-      <div className="title"> My Music</div>
+    <div className="music-container">
+      <div className="title"> My music</div>
       <div className="header">
         <div className="header-text" onClick={()=>setStatus('songs')}>
           Songs

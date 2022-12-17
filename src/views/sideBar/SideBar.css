@@ -1,8 +1,4 @@
-.cont{
-    min-height: 100vh;
-    min-width: 100vw;
-    /* background-color: #e5e5e5; */
-}
+
 /* .elememt{
     height: "40px";
     width: "100px";
@@ -25,24 +21,25 @@
     background-color: #edeeee;
     height: 100vh;
     width: 300px;
-    border-right: 1px whitesmoke solid;
+    border-right: 0.5px whitesmoke solid;
 }
 .space{
     margin-top: "30px";
 }
 
-.sideBar{
-    justify-content: 'center';
-    align-items: 'center'; 
+.sidebar{
+    justify-content: center;
+    align-items: center; 
     display: 'flex'; 
     flex-direction: 'column';
-    width: '300px';
-    height: '100vh'; 
-    background-color: "#edeeee";                                     
+    width: 30vw;
+    height: 70vh; 
+    background-color: #edeeee;                                     
 }
 .link:hover{
     text-decoration: none;
-    border-radius: 0px;
+    border-radius: 3px;
+    height: 30px;
     color: #000;
     padding: 0px;
     transition: color 200ms ease-out;
