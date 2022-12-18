@@ -1,5 +1,5 @@
 import React from 'react';
-import './loginPage.css'
+import './register.css'
 import { Formik, Field } from 'formik';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,6 +10,7 @@ import { greenPrimary } from '../../store/constant';
 import Button from '@mui/material/Button';
 import Loader from 'react-loader-spinner';
 import validator from 'validator';
+import { useNavigate } from 'react-router-dom';
 import eye from '../../assets/eye-open.svg';
 import eyeOpen from '../../assets/eye-slash.svg';
 const RegisterPage = () => {
@@ -19,6 +20,7 @@ const RegisterPage = () => {
     const togglePasswordVisibility = () => {
         setVisible(!visible);
     };
+    const navigate = useNavigate();
     const navigateSuccess = useCallback(() => {
         const token = window.sessionStorage.getItem('token');
 
@@ -118,13 +120,14 @@ const RegisterPage = () => {
                 }}>
                 {({ isValid, values, handleChange, handleSubmit, handleBlur, isSubmitting }) => (
                     <>
-                        <form className="login-form" onSubmit={handleSubmit}>
+                        <form className="register-form" onSubmit={handleSubmit}>
                             <div className="form-header">
                                 <div>Create Account here</div>
                             </div>
                             <div className="space-evenly">
-                                <div className="form-control">
-                                    <div className="formLabel">First Name</div>
+                                <div className="register-form-control">
+                                    <div className="register-form-label">Full Name</div>
+                                    <div className="formInput">
                                     <Field
                                         label="Email Address"
                                         id="123asawfa"
@@ -135,68 +138,59 @@ const RegisterPage = () => {
                                         onChange={handleChange}
                                         onBlur={handleBlur}
                                     />
+                                    </div>
                                 </div>
-                                <div className="form-control">
-                                    <div className="formLabel">Last Name</div>
-                                    <Field
-                                        label="Last Name"
-                                        id="123asawfa"
-                                        name="lastName"
-                                        type="text"
-                                        value={values.lastName}
-                                        placeholder="lastName"
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
-                                    />
-                                </div>
-                            </div>
-                            <div className="space-evenly">
-                            <div className="form-control">
-                                <div className="formLabel">Email</div>
-                                <Field
-                                    label="Email Address"
-                                    id="123asawfa"
-                                    name="email"
-                                    type="email"
-                                    value={values.email}
-                                    placeholder="Email Address  Ex. ( learnspace@example.com )"
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                />
-                            </div>
-                            <div className="form-control">
-                                <div className="formLabel">Password</div>
-                                <div className="form-input">
-                                    <Field
-                                        label="Password"
-                                        id="123asaeaq"
-                                        name="password"
-                                        type={visible ? 'text' : 'password'}
-                                        value={values.password}
-                                        placeholder="Enter Password"
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
-                                    />
-                                    <div
-                                        className="eye-icon"
-                                        onClick={togglePasswordVisibility}
-                                        onKeyDown={togglePasswordVisibility}
-                                        role="button"
-                                        tabIndex={0}>
-                                        <img
-                                            src={visible ? eyeOpen : eye}
-                                            alt=""
-                                            style={{
-                                                paddingRight: '1rem',
-                                                cursor: 'pointer'
-                                            }}
+                                <div className="register-form-control">
+                                    <div className="register-form-label">Email</div>
+                                    <div className="formInput">
+                                        <Field
+                                            label="Email Address"
+                                            id="123asawfa"
+                                            name="email"
+                                            type="email"
+                                            value={values.email}
+                                            placeholder="Email"
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
                                         />
                                     </div>
                                 </div>
                             </div>
-                            <div className="form-control">
-                                <div className="formLabel">Confirm Password</div>
-                                <div className="form-input">
+                            <div className="space-evenly">
+                                <div className="register-form-control">
+                                    <div className="register-form-label">Password</div>
+                                        <div className="formInput">
+                                            <Field
+                                                label="Password"
+                                                id="123asaeaq"
+                                                name="password"
+                                                type={visible ? 'text' : 'password'}
+                                                value={values.password}
+                                                placeholder="Enter Password"
+                                                onChange={handleChange}
+                                                onBlur={handleBlur}
+                                            />
+                                        <div
+                                            className="eye-icon"
+                                            onClick={togglePasswordVisibility}
+                                            onKeyDown={togglePasswordVisibility}
+                                            role="button"
+                                            tabIndex={0}>
+                                            <img
+                                                src={visible ? eyeOpen : eye}
+                                                alt=""
+                                                style={{
+                                                    paddingRight: '1rem',
+                                                    cursor: 'pointer'
+                                                }}
+                                            />
+                                        </div>
+                                        </div>
+                                </div>
+                            
+                            <div className="register-form-control">
+                                <div className="register-form-label">Confirm Password</div>
+                                <div className="formInput">
                                     <Field
                                         label="Confirm Password"
                                         id="123asaeaq"
@@ -230,14 +224,14 @@ const RegisterPage = () => {
                                 disabled={!isValid}
                                 type="submit"
                                 variant="contained"
+                                onClick={()=>{navigate('/dashboard/my-music')}}
                                 sx={{
                                     backgroundColor: '#edeeee',
                                     width: '20rem',
                                     paddingTop: '1rem',
                                     paddingBottom: '1rem',
                                     outLine: '1px solid #fff',
-                                    marginBottom: '1rem',
-                                    marginLeft: '2rem',
+                                    margin: '2rem',
                                     color: 'black',
                                     '&:hover': { backgroundColor: "#000",
                                     borderStyle: 'groove',
@@ -245,7 +239,7 @@ const RegisterPage = () => {
                                     color: '#edeeee' }
                                     }}>
                                 {isSubmitting && <Loader type="TailSpin" color="#FFF" height={20} width={20} />}
-                                {!isSubmitting && 'Login'}
+                                {!isSubmitting && 'Submit'}
                             </Button>
                             </div>
                             <div className="create-account">

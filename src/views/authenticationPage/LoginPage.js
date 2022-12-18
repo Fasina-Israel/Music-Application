@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useCallback, useContext, useState } from 'react';
 import AuthContext from '../../store/context';
 import notify from '../../hooks/UseNotify';
+import { useNavigate } from 'react-router-dom';
 import { greenPrimary } from '../../store/constant';
 import Button from '@mui/material/Button';
 import Loader from 'react-loader-spinner';
@@ -19,6 +20,7 @@ const LoginPage = () => {
     const togglePasswordVisibility = () => {
         setVisible(!visible);
     };
+    
     const navigateSuccess = useCallback(() => {
         const token = window.sessionStorage.getItem('token');
 

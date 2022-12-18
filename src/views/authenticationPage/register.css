@@ -1,0 +1,46 @@
+.register-container{
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    margin: auto;
+}
+.register-form{
+    width: 80vw;
+    height: 70vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.space-evenly{
+    width: 70vw;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+.register-form-control{
+    width: 70vw;
+    /* height: 70vh; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.register-form-label {
+    width: 370px;
+    height: 17px;
+    font-style: normal;
+    justify-content: left;
+    align-items: left;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #fff;
+    margin-bottom: 10px;
+}

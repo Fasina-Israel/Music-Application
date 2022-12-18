@@ -42,7 +42,7 @@
     height: 30px;
     color: #000;
     padding: 0px;
-    transition: color 200ms ease-out;
+    /* transition: color 200ms ease-out; */
     background-color: #f2f2f0;
 }
 .sideBar-line{

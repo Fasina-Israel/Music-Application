@@ -14,7 +14,7 @@ const SideBar = ({setStatus}) => {
     const [size, setSize] = useState(300)
     const header = {
         height: "40px",
-        width: "150px",
+        width: "200px",
         color: "#000",
         fontFamily: 'Roboto',
         fontSize: "40px",
