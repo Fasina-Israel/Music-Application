@@ -13,25 +13,28 @@ import Loader from 'react-loader-spinner';
 import validator from 'validator';
 import eye from '../../assets/eye-open.svg';
 import eyeOpen from '../../assets/eye-slash.svg';
+import { useSelector, useDispatch } from 'react-redux'
+import { LOGIN } from './../../store/actions'
+
 const LoginPage = () => {
 
-    const { setAuth } = useContext(AuthContext);
+    const authState = useSelector((state) => state.authentication)
     const [visible, setVisible] = useState(false);
     const togglePasswordVisibility = () => {
         setVisible(!visible);
     };
     
-    const navigateSuccess = useCallback(() => {
-        const token = window.sessionStorage.getItem('token');
-
-        window.location.href = `http://localhost:3001/dashboard/?token=${token}`;
-    }, []);
+    console.log(authState, 'authstate');
+    const dispatch = useDispatch();
+    
     const submit = useCallback(
         async (username, password) => {
             const credentials = {
                 username,
                 password
             };
+            dispatch({ type: LOGIN, payload : credentials})
+            console.log(credentials);
             // try {
             //     const requestOptions = {
             //         method: 'POST',
@@ -173,29 +176,29 @@ const LoginPage = () => {
                                     Forgot Password ?
                                 </a>
                             </div>
-                            <div className="button">
-                                <Button 
-                                    disabled={!isValid}
-                                    type="submit"
-                                    variant="contained"
-                                    sx={{
-                                        backgroundColor: '#edeeee',
-                                        width: '20rem',
-                                        paddingTop: '1rem',
-                                        paddingBottom: '1rem',
-                                        outLine: '1px solid #fff',
-                                        marginBottom: '1rem',
-                                        marginLeft: '2rem',
-                                        color: 'black',
-                                        '&:hover': { backgroundColor: "#000",
-                                        borderStyle: 'groove',
-                                        border: '1px solid #fff',
-                                        color: '#edeeee' }
+                            <Button 
+                                disabled={!isValid}
+                                type="submit"
+                                variant="contained"
+                                // onClick={()=>{
+                                //   navigate('./dashboard/my-music');
+                                // }}
+                                sx={{
+                                    backgroundColor: '#fff',
+                                    width: '20rem',
+                                    paddingTop: '1rem',
+                                    paddingBottom: '1rem',
+                                    outLine: '1px solid #fff',
+                                    marginBottom: '1rem',
+                                    marginLeft: '2rem',                                        color: 'black',
+                                    '&:hover': { backgroundColor: "#000",
+                                    borderStyle: 'groove',
+                                    border: '1px solid #fff',
+                                    color: '#edeeee' }
                                     }}>
                                     {isSubmitting && <Loader type="TailSpin" color="#FFF" height={20} width={20} />}
                                     {!isSubmitting && 'Login'}
                                 </Button>
-                            </div>
                             <div className="create-account">
                                 Don&apos;t have an account ?
                                 <a className="create-accountLink" href="/register">

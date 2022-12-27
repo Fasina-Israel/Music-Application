@@ -1,10 +1,12 @@
 import React, {useState} from 'react'
 import Songs from './song/Songs'
 import './myMusic.css';
+import Loader from 'react-loader-spinner';
 
 
 const MyMusic = () => {
-  const [status, setStatus ] = useState('songs')
+  const [loading, setLoading] = useState(true);
+  const [status, setStatus ] = useState('songs');
   return (
     <div className="music-container">
       <div className="title"> My music</div>

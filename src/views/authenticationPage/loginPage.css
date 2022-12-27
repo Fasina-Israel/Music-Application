@@ -7,6 +7,16 @@ body{
     align-items: center;
     background-color: black;
 }
+@media only screen and (max-width: 600px) {
+    body {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin: auto;
+    }
+  }
 
 .register-containers{
     justify-content: center;
@@ -22,7 +32,7 @@ body{
 .login-containers {
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -114,7 +124,7 @@ body{
 
 @media (max-width: 600px) {
     .form {
-        width: 360px;
+        width: 100%;
         height: 350px;
         background-color: #fff;
         margin-top: 15px;
@@ -177,6 +187,7 @@ h2 {
     top: -30px;
     left: 350px;
     position: relative;
+    width: 30px
 }
 
 @media (max-width: 600px) {
@@ -237,24 +248,17 @@ input {
     text-decoration: none;
     color: #000;
 }
-button {
+.button {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 12px 8px;
     gap: 8px;
-    width: 40%;
+    width: 100%;
     height: 43px;
-    background: #0d9b48;
-    color: #000;
-    border-radius: 4px;
-    border: none;
-    flex: none;
-    order: 1;
     flex-grow: 0;
     margin: auto;
-    margin-bottom: 10px;
     cursor: pointer;
 }
 .create-account {
@@ -267,11 +271,30 @@ button {
     align-items: center;
     color: #fff;
 }
+@media only screen and (max-width: 600px){
+.create-account{
+    display: flex;
+    flex-direction: row;
+    width: 380px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+}
+    
 .create-accountLink {
     text-decoration: none;
     color: #edeeee;
     margin-left: 5px;
-
+}
+@media only screen and (max-width: 600px){
+    .create-accountLink{
+        text-decoration: none;
+        color: #000;
+        margin-left: 5px;
+    }
 }
 .login-copyright-text {
     margin-top: 20px;
